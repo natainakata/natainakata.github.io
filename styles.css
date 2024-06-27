@@ -10,12 +10,21 @@
   }
 }
 
-body {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   width: 100%;
   height: 100vh;
-  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Helvetika, sans-serif;
 }
 
 header {
@@ -52,7 +61,6 @@ nav>ul {
 
 nav>ul>li {
   height: 100%;
-  color: var(--foreground);
   padding: 0 1rem;
   display: block;
   font-size: 1.5rem;
@@ -77,16 +85,13 @@ nav>ul>li:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: var(--background);
 }
 
 #welcome h1 {
-  color: var(--foreground);
   font-size: 4rem;
 }
 
 #welcome p {
-  color: var(--foreground);
   font-size: 2rem;
 }
 
@@ -95,12 +100,11 @@ nav>ul>li:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: var(--background);
-  color: var(--foreground);
+  align-items: center;
   padding: 5rem 0;
 }
 
-#image-container {
+/* #image-container {
   display: inline-flex;
   flex-direction: column;
   font-weight: bold;
@@ -115,38 +119,49 @@ nav>ul>li:hover {
 
 figcaption {
   margin: 0 auto;
-}
+} */
 
 #profile {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  text-align: center;
 }
 
-#profile p {
-  margin: 0;
+.text-container {
+  margin: 10px 0;
+}
+
+.text-container h1,
+h2 {
+  text-align: center;
+  margin: 1rem auto;
+  font-size: 3em;
+}
+
+.text-container p {
+  font-size: 16px;
+  text-align: justify;
 }
 
 #contact {
   height: 60vh;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: var(--background);
-  color: var(--foreground);
+  font-size: 3em;
 }
 
 #contact h1 {
+  font-size: 1.5em;
   margin-top: 0;
   text-align: center;
-  font-size: 2rem;
 }
 
 #links {
   margin: 0 auto;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
 }
 
@@ -160,10 +175,9 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--background);
-  color: var(--foreground);
   border-top: 5px solid var(--header);
   height: 120px;
+  width: 100%;
 }
 
 footer p {
@@ -171,7 +185,17 @@ footer p {
   font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width: 481px) {
+  .text-container {
+    margin: 0 2em;
+  }
+
+  .text-container p {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
   html {
     font-size: 12px;
   }
@@ -181,6 +205,23 @@ footer p {
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 3em;
+  }
+
+  .text-container {
+    margin: 0 3em;
+  }
+
+  .text-container h1,
+  h2 {
+    font-size: 2rem;
+  }
+
+  .text-container p {
+    text-align: center;
+  }
+
+  #contact {
+    font-size: 2em;
   }
 }
