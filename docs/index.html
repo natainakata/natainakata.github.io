@@ -1,7 +1,7 @@
 <!doctype html>
 <html
   lang="ja"
-  class="[background-color:_#252529;] [color:_#dfdfe2] m-plus-1p-regular motion-safe:scroll-smooth"
+  class="[background-color:--background] [color:--foreground] m-plus-1p-regular motion-safe:scroll-smooth"
 >
   <head>
     <meta charset="UTF-8" />
@@ -17,6 +17,11 @@
         font-weight: 400;
         font-style: normal;
       }
+      :root {
+        --background: #252529;
+        --foreground: #dfdfe2;
+        --header: #8c2323;
+      }
     </style>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="shortcut icon" type="image/x-icon" href="./assets/logo.svg" />
@@ -26,24 +31,24 @@
   <body>
     <header
       id="navbar"
-      class="fixed w-full h-16 flex md:justify-end justify-center flex-wrap top-0 [background-color:_#8c2323] font-bold"
+      class="fixed w-full h-16 flex md:justify-end justify-center flex-wrap top-0 [background-color:--header] font-bold"
     >
       <nav class="h-full px-6 py-0">
         <ul
           class="flex flex-nowrap justify-evenly ms-0 me-0 ps-0 items-center h-full"
         >
           <li
-            class="h-full p-4 hover:[background-color:_#dfdfe2] hover:[color:_#252529]"
+            class="h-full p-4 hover:[background-color:--foreground] hover:[color:--background]"
           >
             <a href="#welcome">Welcome</a>
           </li>
           <li
-            class="h-full p-4 hover:[background-color:_#dfdfe2] hover:[color:_#252529]"
+            class="h-full p-4 hover:[background-color:--foreground] hover:[color:--background]"
           >
             <a href="#about">About</a>
           </li>
           <li
-            class="h-full p-4 hover:[background-color:_#dfdfe2] hover:[color:_#252529]"
+            class="h-full p-4 hover:[background-color:--foreground] hover:[color:--background]"
           >
             <a href="#contact">Contact</a>
           </li>
@@ -124,7 +129,7 @@
     </main>
 
     <footer
-      class="border-t-4 [border-color:_#dfdfe2] h-40 flex item-center justify-between"
+      class="border-t-4 [border-color:--foreground] h-40 flex item-center justify-between"
     >
       <p class="m-auto text-2xl">Natai Nakata 2024</p>
     </footer>
