@@ -596,12 +596,13 @@ video {
   top: 0px;
 }
 
-.m-8 {
-  margin: 2rem;
-}
-
 .m-auto {
   margin: auto;
+}
+
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .mx-auto {
@@ -614,16 +615,26 @@ video {
   margin-bottom: 0px;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
 
-.me-0 {
-  margin-inline-end: 0px;
+.mr-auto {
+  margin-right: auto;
 }
 
-.ms-0 {
-  margin-inline-start: 0px;
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .block {
@@ -670,6 +681,10 @@ video {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -690,6 +705,11 @@ video {
   border-top-width: 4px;
 }
 
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -698,23 +718,19 @@ video {
   padding: 2rem;
 }
 
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.ps-0 {
-  padding-inline-start: 0px;
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .text-center {
@@ -745,12 +761,20 @@ video {
   font-weight: 700;
 }
 
+.\[background-blend-mode\:multiply\] {
+  background-blend-mode: multiply;
+}
+
 .\[background-color\:--background\] {
   background-color: var(--background);
 }
 
 .\[background-color\:--header\] {
   background-color: var(--header);
+}
+
+.\[background-image\:url\(\'\.\/assets\/background\.png\'\)\] {
+  background-image: url('./assets/background.png');
 }
 
 .\[border-color\:--foreground\] {
@@ -775,8 +799,40 @@ video {
   }
 }
 
+@media (min-width: 640px) {
+  .sm\:max-h-40 {
+    max-height: 10rem;
+  }
+
+  .sm\:max-w-xl {
+    max-width: 36rem;
+  }
+}
+
 @media (min-width: 768px) {
-  .md\:justify-end {
-    justify-content: flex-end;
+  .md\:max-h-80 {
+    max-height: 20rem;
+  }
+
+  .md\:max-w-2xl {
+    max-width: 42rem;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:max-h-96 {
+    max-height: 24rem;
+  }
+
+  .xl\:max-w-3xl {
+    max-width: 48rem;
   }
 }
