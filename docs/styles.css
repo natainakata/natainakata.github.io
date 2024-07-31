@@ -596,12 +596,13 @@ video {
   top: 0px;
 }
 
-.m-8 {
-  margin: 2rem;
-}
-
 .m-auto {
   margin: auto;
+}
+
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .mx-auto {
@@ -624,6 +625,10 @@ video {
 
 .ms-0 {
   margin-inline-start: 0px;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .block {
@@ -713,6 +718,11 @@ video {
   padding-bottom: 0px;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .ps-0 {
   padding-inline-start: 0px;
 }
@@ -745,12 +755,20 @@ video {
   font-weight: 700;
 }
 
+.\[background-blend-mode\:multiply\] {
+  background-blend-mode: multiply;
+}
+
 .\[background-color\:--background\] {
   background-color: var(--background);
 }
 
 .\[background-color\:--header\] {
   background-color: var(--header);
+}
+
+.\[background-image\:url\(\'\.\/assets\/p_new0128_m_new01280\.png\'\)\] {
+  background-image: url('./assets/p_new0128_m_new01280.png');
 }
 
 .\[border-color\:--foreground\] {
