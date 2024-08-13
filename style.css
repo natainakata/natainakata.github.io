@@ -1,14 +1,67 @@
 @charset "utf-8";
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
 
-.m-plus-1p-regular {
+* {
+  box-sizing: border-box;
   font-family: "M PLUS 1p", sans-serif;
-  font-weight: 400;
   font-style: normal;
+  margin: 0;
 }
 
 :root {
   --background: #252529;
   --foreground: #dfdfe2;
   --header: #8c2323;
+}
+
+body {
+  background: var(--background) url("./docs/assets/background.png");
+  background-blend-mode: multiply;
+  color: var(--foreground);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  height: 64px;
+  background: var(--header);
+  align-items: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2em;
+  flex: 2;
+  text-align: center;
+}
+
+nav {
+  flex: 2;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul > li {
+  flex: 3;
+  border-left: 2px solid var(--background);
+}
+
+nav ul > li > a {
+  display: block;
+  line-height: 64px;
+  text-align: center;
+}
+
+nav > ul > li > a:hover {
+  background: var(--background);
 }
