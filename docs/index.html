@@ -28,83 +28,69 @@
 
 <body>
   <header id="navbar"
-    class="fixed w-full h-16 flex md:justify-between justify-center flex-wrap top-0 [background-color:--header] font-bold">
-    <section class="flex justify-start text-2xl items-center">
-      <object data="./assets/logo.svg" type="image/svg+xml" height="64px" class="px-4"></object>
-      <p>Natai Nakata</p>
-    </section>
-
-    <nav class="flex flex-nowrap justify-evenly items-center">
-      <a href="#welcome"
-        class="h-full p-4 items-center hover:[background-color:--foreground] hover:[color:--background]">Welcome</a>
-      <a href="#about"
-        class="h-full p-4 items-center hover:[background-color:--foreground] hover:[color:--background]">About</a>
-      <a href="#contact"
-        class="h-full p-4 items-center hover:[background-color:--foreground] hover:[color:--background]">Contact</a>
+    class="w-full h-16 flex [background-color:--header] font-bold  text-xl ">
+    <h1 class="flex-1">
+      <img src="./assets/logo.svg" width="64" height="64" class="flex-1">
+    </h1>
+    <nav class="flex-1"> <ul class="flex item-center">
+        <li class="flex-1">
+          <a href="#welcome"
+            class="block [line-height:64px] text-center hover:[background-color:--foreground] hover:[color:--background]">Welcome</a>
+        </li>
+        <li class="flex-1">
+          <a href="#about" 
+            class="block [line-height:64px] text-center hover:[background-color:--foreground] hover:[color:--background]">About</a>
+        </li>
+      </ul>
     </nav>
   </header>
   <main
-    class="[background-image:url('./assets/background.png')] [background-blend-mode:multiply] [background-color:--background] py-16">
-    <section id="welcome" class="flex flex-col flex-wrap justify-center items-center w-full h-screen font-bold">
-      <h1 class="text-6xl">Natai Nakata</h1>
-      <p class="text-4xl">Program And TCG</p>
-    </section>
-    <section id="about">
-      <section id="profile" class="text-2xl text-balance text-center">
-        <section id="greeting" class="container flex justify-evenly my-8 md:flex-row flex-col">
-          <img src="assets/profile.png" alt="" class="object-contain xl:max-w-3xl xl:max-h-96 md:max-w-2xl md:max-h-80 sm:max-w-xl sm:max-h-40 mx-auto px-16 my-0">
-          <section #id="profile-text" class="block text-center mr-auto my-auto p-auto">
-            <h2 class="text-center text-3xl p-4">あいさつ</h1>
-              <p>
-                <a href="https://mk.shrimpia.network/@natainakata" target="_blank">中田なたい</a>と申します。
-              </p>
-              <p>
-                普段は<a href="https://mk.shrimpia.network" target="_blank">シュリンピア帝国</a>に生息しているプログラマー志望の一般決闘者です。
-              </p>
-          </section>
-
-        </section>
-
-        <section id="like-contents" class="container block mx-auto my-0 p-8">
-          <h2 class="text-3xl p-4">趣味とか</h2>
-          <p>現在のメインはTCG(遊戯王OCG,デュエルマスターズ)です。</p>
-          <p>
-            <a href="https://mk.shrimpia.network/channels/9o9b8s3ut6" target="_blank">シュリンピア帝国遊戯王部</a>の部長もやってます。
-          </p>
-          <p>
-            その他Modded Minecraft、モンハン、ガンダムなどを擦っています。
-          </p>
-        </section>
-
-        <section id="learned-skills" class="containerblock mx-auto my-0 p-8">
-          <h2 class="text-3xl p-4">勉強したもの</h2>
-          <p>freeCodeCampのカリキュラムを現在進行しています。</p>
-          <p>下記のリンクにて現在の進捗を閲覧できます。</p>
-        </section>
+    class="[background-image:url('./assets/background.png')] [background-blend-mode:multiply] [background-color:--background] container mx-auto py-8 text-center h-auto">
+    <section id="welcome" class="flex flex-col justify-center items-center py-16">
+      <section id="hero">
+        <h2 class="text-6xl">Natai Nakata</h2>
+        <p class="text-4xl">Program And TCG</p>
       </section>
-    </section>
-    <section id="contact" class="text-center text-3xl mt-8 mx-8">
-      <h2 class="mb-4">Contact US</h1>
-        <ul id="links" class="flex justify-center items-center">
-          <li class="px-4">
-            <a href="https://github.com/natainakata" id="link-github" target="_blank"><i
-                class="fa-brands fa-github"></i>
-            </a>
-          </li>
-          <li class="px-4">
-            <a href="https://www.freecodecamp.org/natainakata" id="profile-link-fcc" target="_blank"><i
-                class="fa-brands fa-free-code-camp"></i></a>
-          </li>
-          <li class="px-4">
-            <a href="https://linktr.ee/natainakata" id="link-linktree" target="_blank"><i
-                class="fa-solid fa-link"></i></a>
-          </li>
-        </ul>
+      <section id="profile" class="flex gap-8 justify-between items-center mt-8">
+        <div class="flex-1">
+          <img src="assets/profile.png" alt="profile" width="320" height="320" class="align-bottom">
+        </div>
+        <div class="flex-1">
+          <div>
+            <h3 class="text-3xl">あいさつ</h3>
+             <p>
+               <a href="https://mk.shrimpia.network/@natainakata" target="_blank">中田なたい</a>と申します。<br>普段は<a href="https://mk.shrimpia.network" target="_blank">シュリンピア帝国</a>に生息しているプログラマー志望の一般決闘者です。
+             </p>
+          </div>
+          <div class="">
+            <h3 class="text-3xl mt-4">趣味とか</h3>
+            <p>現在のメインはTCG(遊戯王OCG,デュエルマスターズ)です。</p>
+            <p>
+              <a href="https://mk.shrimpia.network/channels/9o9b8s3ut6" target="_blank">シュリンピア帝国遊戯王部</a>の部長もやってます。
+            </p>
+            <p>
+              その他Modded Minecraft、モンハン、ガンダムなどを擦っています。
+            </p>
+          </div>
+        </div>
     </section>
   </main>
-
-  <footer class="border-t-4 [border-color:--foreground] h-40 flex item-center justify-between">
-    <small class="m-auto text-2xl">Natai Nakata 2024</p>
+  <footer class="border-t-4 [border-color:--foreground] text-center pt-4 m-0">
+    <address class="mx-auto">
+      <h2 class="mb-4 font-bold text-xl">Contact US</h2>
+      <ul id="links" class="flex justify-center items-center">
+        <li class="mx-4">
+          <a href="https://github.com/natainakata" id="link-github" target="_blank"><i
+              class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li class="mx-4">
+          <a href="https://linktr.ee/natainakata" id="link-linktree" target="_blank"><i
+              class="fa-solid fa-link"></i></a>
+        </li>
+      </ul>
+    </address>
+    <small class="mx-auto mt-8">Natai Nakata 2024</small>
   </footer>
 </body>
 

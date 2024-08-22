@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -588,21 +588,13 @@ video {
   }
 }
 
-.fixed {
-  position: fixed;
+.m-0 {
+  margin: 0px;
 }
 
-.top-0 {
-  top: 0px;
-}
-
-.m-auto {
-  margin: auto;
-}
-
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .mx-auto {
@@ -610,27 +602,12 @@ video {
   margin-right: auto;
 }
 
-.my-0 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
 
-.mr-auto {
-  margin-right: auto;
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-8 {
@@ -649,40 +626,24 @@ video {
   height: 4rem;
 }
 
-.h-40 {
-  height: 10rem;
-}
-
-.h-full {
-  height: 100%;
-}
-
-.h-screen {
-  height: 100vh;
+.h-auto {
+  height: auto;
 }
 
 .w-full {
   width: 100%;
 }
 
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 .flex-col {
   flex-direction: column;
 }
 
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.flex-nowrap {
-  flex-wrap: nowrap;
-}
-
 .items-center {
   align-items: center;
-}
-
-.justify-start {
-  justify-content: flex-start;
 }
 
 .justify-center {
@@ -693,39 +654,12 @@ video {
   justify-content: space-between;
 }
 
-.justify-evenly {
-  justify-content: space-evenly;
-}
-
-.text-balance {
-  text-wrap: balance;
+.gap-8 {
+  gap: 2rem;
 }
 
 .border-t-4 {
   border-top-width: 4px;
-}
-
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.p-4 {
-  padding: 1rem;
-}
-
-.p-8 {
-  padding: 2rem;
-}
-
-.px-16 {
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .py-16 {
@@ -733,13 +667,21 @@ video {
   padding-bottom: 4rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
 .text-center {
   text-align: center;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.align-bottom {
+  vertical-align: bottom;
 }
 
 .text-3xl {
@@ -755,6 +697,11 @@ video {
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -785,6 +732,10 @@ video {
   color: var(--foreground);
 }
 
+.\[line-height\:64px\] {
+  line-height: 64px;
+}
+
 .hover\:\[background-color\:--foreground\]:hover {
   background-color: var(--foreground);
 }
@@ -796,43 +747,5 @@ video {
 @media (prefers-reduced-motion: no-preference) {
   .motion-safe\:scroll-smooth {
     scroll-behavior: smooth;
-  }
-}
-
-@media (min-width: 640px) {
-  .sm\:max-h-40 {
-    max-height: 10rem;
-  }
-
-  .sm\:max-w-xl {
-    max-width: 36rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:max-h-80 {
-    max-height: 20rem;
-  }
-
-  .md\:max-w-2xl {
-    max-width: 42rem;
-  }
-
-  .md\:flex-row {
-    flex-direction: row;
-  }
-
-  .md\:justify-between {
-    justify-content: space-between;
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:max-h-96 {
-    max-height: 24rem;
-  }
-
-  .xl\:max-w-3xl {
-    max-width: 48rem;
   }
 }

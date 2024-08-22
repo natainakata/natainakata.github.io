@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cssbuild": "tailwindcss -i 'src/styles.css' -o 'docs/styles.css'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "tailwindcss": "^3.4.6"
+    "tailwindcss": "^3.2.0"
   }
 }
