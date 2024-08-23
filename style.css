@@ -135,3 +135,16 @@ main {
 #works {
   margin-top: 1em;
 }
+
+/* footer */
+
+footer {
+  border-top: 4px solid var(--foreground);
+  padding: 1em 0;
+  text-align: center;
+}
+
+footer small {
+  font-size: 14px;
+  margin-top: 0.5em;
+}
