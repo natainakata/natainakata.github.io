@@ -81,12 +81,18 @@ nav ul {
 }
 
 nav li {
+  border-left: 2px solid var(--background);
   flex: 3;
 }
 
 nav a {
   display: block;
   line-height: 64px;
+}
+
+nav a:hover {
+  background: var(--foreground);
+  color: var(--background);
 }
 
 /* main */
