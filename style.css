@@ -101,6 +101,8 @@ main {
 
 #hero {
   flex: 1;
+  padding: 3em 0;
+  font-size: 2em;
 }
 
 /* about */
