@@ -44,6 +44,13 @@ a {
   color: inherit;
 }
 
+.container {
+  max-width: 800px;
+  width: calc(100vw - 64px);
+  margin: 0 auto;
+  text-align: center;
+}
+
 /* header */
 
 header {
@@ -75,4 +82,51 @@ nav li {
 nav a {
   display: block;
   line-height: 64px;
+}
+
+/* main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 0;
+}
+
+/* hero */
+
+#hero {
+  flex: 1;
+}
+
+/* about */
+#about {
+  margin-top: 2em;
+}
+
+#profile {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+#profile div {
+  flex: 1;
+}
+
+#profile img {
+  width: 50%;
+  height: 50%;
+}
+
+.text-container {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+/* works */
+#works {
+  margin-top: 1em;
 }
