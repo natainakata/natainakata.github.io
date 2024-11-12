@@ -1,4 +1,5 @@
 import markdownStyles from "./markdown-styles.module.css";
+import "highlight.js/styles/atom-one-dark.css";
 
 type Props = {
   content: string;

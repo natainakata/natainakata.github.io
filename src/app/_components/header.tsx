@@ -4,7 +4,7 @@ import Icon from "./icon";
 
 const Header = () => {
   return (
-    <header className="shadow-sm container">
+    <header className="shadow-sm container mx-auto">
       <div className="mx-auto container flex flex-wrap p-4 flex-col md:flex-row items-center md:justify-between">
         <h2 className="font-bold tracking-tight md:tracking-tighter leading-tight flex items-center">
           <div className="pr-4">
