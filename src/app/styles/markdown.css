@@ -1,0 +1,8 @@
+.prose .rehype-code-title {
+  @apply table bg-gray-700 text-white pt-1 pb-5 px-3 rounded-t-md text-sm;
+  margin-bottom: -16px;
+}
+
+.prose .rehype-code-title + pre {
+  @apply mt-0;
+}
