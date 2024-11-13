@@ -3,6 +3,6 @@
   margin-bottom: -16px;
 }
 
-.prose .rehype-code-title + pre {
+.prose .rehype-code-title + figure {
   @apply mt-0;
 }
