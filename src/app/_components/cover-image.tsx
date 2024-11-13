@@ -1,6 +1,6 @@
 import cn from "classnames";
+import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
-import Image from "next/image";
 
 type Props = {
   title: string;
@@ -10,7 +10,7 @@ type Props = {
 
 const CoverImage = ({ title, src, slug }: Props) => {
   const image = (
-    <Image
+    <ExportedImage
       src={src}
       alt={`Cover Image for ${title}`}
       className={cn("shadow-sm w-full", {

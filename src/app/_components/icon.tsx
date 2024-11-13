@@ -1,9 +1,14 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 const Icon = () => {
   return (
     <div>
-      <Image src="/assets/icon/icon.svg" alt="Icon" width={64} height={64} />
+      <ExportedImage
+        src="/assets/icon/icon.svg"
+        alt="Icon"
+        width={64}
+        height={64}
+      />
     </div>
   );
 };
