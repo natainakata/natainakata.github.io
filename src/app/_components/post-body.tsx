@@ -1,5 +1,3 @@
-import "prism-themes/themes/prism-one-dark.min.css";
-
 import "../styles/markdown.css";
 
 type Props = {
