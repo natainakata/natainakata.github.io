@@ -17,7 +17,7 @@ ogImage:
 
 1\. リポジトリの作成、今回は`yarn{:shell}`で環境構築
 
-```bash:shell
+```bash title="shell"
 yarn create next-app --example blog-starter natai-blog
 cd natai-blog
 yarn dev
@@ -33,7 +33,7 @@ blog-starterのスタイルが適用されているので変更します。
 
 M PLUS 1pを導入します。
 
-```ts:tailwind.config.ts
+```ts title="tailwond.config.ts"
 const config: Config = {
   ...
   theme: {
@@ -45,7 +45,7 @@ const config: Config = {
 }
 ```
 
-```css:src/app/globals.css
+```css title="src/app/globals.css"
 + @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
 ```
 
@@ -58,7 +58,7 @@ const config: Config = {
 
 また、Iconコンポーネントを作成してヘッダーとフッターに表示しています。
 
-```tsx:src/app/_conponents/Icon.tsx
+```tsx title="src/app/_conponents/Icon.tsx"
 import ExportedImage from "next/next-image-export-optimizer";
 
 const Icon = () => {
@@ -92,11 +92,11 @@ export default Icon;
 
 元々存在した`markdown-styles.module.css{:plaintext}`は削除しました。
 
-```bash:shell
+```bash title="shell"
 yarn add @tailwindcss/typography
 ```
 
-```ts:tailwind.config.ts
+```ts title="tailwind.config.ts"
 module.exports = {
   ...
 +  plugins: [
@@ -108,11 +108,11 @@ module.exports = {
 
 また、シンタックスハイライトを適用させたいので`rehype-pretty-code{:plaintext}`も導入します。
 
-```bash:shell
+```bash title="shell"
 yarn add rehype-pretty-code shiki
 ```
 
-```ts:src/lib/markdownToHtml.ts
+```ts title="src/lib/markdownToHtml.ts"
 import { unified } from "unified";
 import remarkRehype from "remark-rehype";
 import remarkParse from "remark-parse";
