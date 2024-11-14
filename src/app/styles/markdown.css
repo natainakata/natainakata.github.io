@@ -6,3 +6,7 @@
 .prose .rehype-code-title + figure {
   @apply mt-0;
 }
+
+.prose p code {
+  @apply align-text-bottom rounded-md px-1 py-0.5;
+}

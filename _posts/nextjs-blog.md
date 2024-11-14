@@ -15,7 +15,7 @@ ogImage:
 
 ### blog-starterを導入する
 
-1\. リポジトリの作成、今回はyarnで環境構築
+1\. リポジトリの作成、今回は`yarn{:shell}`で環境構築
 
 ```bash:shell
 yarn create next-app --example blog-starter natai-blog
@@ -58,7 +58,7 @@ const config: Config = {
 
 また、Iconコンポーネントを作成してヘッダーとフッターに表示しています。
 
-```jsx:src/app/_conponents/Icon.tsx
+```tsx:src/app/_conponents/Icon.tsx
 import ExportedImage from "next/next-image-export-optimizer";
 
 const Icon = () => {
@@ -81,11 +81,55 @@ export default Icon;
 
 ### 記事を置き換える
 
-\_postsディレクトリにはexample記事があるので削除。<br>
+`_posts{:plaintext}`ディレクトリにはexample記事があるので削除。<br>
 この記事に置き換えました。
 
-また、publicディレクトリへ自分のアイコンも配置しています (注:Iconコンポーネントとは別の画像)
+また、`public{:plaintext}`ディレクトリへ自分のアイコンも配置しています (注:Iconコンポーネントとは別の画像)
 
 ### 記事部分のスタイルを修正
 
-記事部分のスタイルがよろしくないのでmarkdown-styles.module.cssを編集していい感じにします。
+記事部分のスタイルがよろしくないので`@tailwindcss/typography{:plaintext}`を導入します。
+
+元々存在した`markdown-styles.module.css{:plaintext}`は削除しました。
+
+```bash:shell
+yarn add @tailwindcss/typography
+```
+
+```ts:tailwind.config.ts
+module.exports = {
+  ...
++  plugins: [
++    require('@tailwindcss/typography'),
++  ],
+  ...
+}
+```
+
+また、シンタックスハイライトを適用させたいので`rehype-pretty-code{:plaintext}`も導入します。
+
+```bash:shell
+yarn add rehype-pretty-code shiki
+```
+
+```ts:src/lib/markdownToHtml.ts
+import { unified } from "unified";
+import remarkRehype from "remark-rehype";
+import remarkParse from "remark-parse";
+import remarkGfm from "remark-gfm";
+import rehypePrettyCode from "rehype-pretty-code";
+import rehypeStringify from "rehype-stringify";
+
+export default async function markdownToHtml(markdown: string) {
+  const result = await unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypePrettyCode, {
+      keepBackground: true,
+    })
+    .use(rehypeStringify)
+    .process(markdown);
+  return result.toString();
+}
+```
