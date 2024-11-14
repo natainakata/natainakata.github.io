@@ -2,7 +2,7 @@
 title: "Next.jsでブログを作った"
 excerpt: "自サイト改修の一環として、Next.jsのblog-starterを使ってブログを作ってみました。"
 coverImage: "/assets/blog/nextjs-blog/cover.png"
-date: "2024-11-12T11:05"
+date: "2024-11-14T12:43"
 author:
   name: "中田なたい"
   picture: "/assets/blog/authors/natai.png"
