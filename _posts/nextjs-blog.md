@@ -56,7 +56,7 @@ const config: Config = {
 
 先程導入したフォントもここで適用します。
 
-また、Iconコンポーネントを作成してヘッダーとフッターに表示しています。
+また、`Icon{:tsx}`コンポーネントを作成してヘッダーとフッターに表示しています。
 
 ```tsx title="src/app/_conponents/Icon.tsx"
 import ExportedImage from "next/next-image-export-optimizer";
@@ -84,7 +84,7 @@ export default Icon;
 `_posts{:plaintext}`ディレクトリにはexample記事があるので削除。<br>
 この記事に置き換えました。
 
-また、`public{:plaintext}`ディレクトリへ自分のアイコンも配置しています (注:Iconコンポーネントとは別の画像)
+また、`public{:plaintext}`ディレクトリへ自分のアイコンも配置しています (注:`Icon{:tsx}`コンポーネントとは別の画像)
 
 ### 記事部分のスタイルを修正
 
@@ -133,3 +133,61 @@ export default async function markdownToHtml(markdown: string) {
   return result.toString();
 }
 ```
+
+コードブロックのタイトルやインラインコードのスタイルも設定しました。
+
+```css title="src/styles/markdown.css"
+.prose figcaption[data-rehype-pretty-code-title] {
+  @apply table bg-gray-700 text-white pt-1 pb-5 px-3 rounded-t-md text-sm;
+  margin-bottom: -16px;
+}
+
+.prose figcaption[data-rehype-pretty-code-title] + figure {
+  @apply mt-0;
+}
+
+.prose p code {
+  @apply align-text-bottom rounded-md px-1 py-0.5;
+}
+```
+
+これらを設定したら記事を表示する`PostBody{:tsx}`コンポーネントへスタイルを適用します。
+
+```tsx title="src/app/_components/post-body.tsx"
+import "../styles/markdown.css";
+
+type Props = {
+  content: string;
+};
+
+export function PostBody({ content }: Props) {
+  return (
+    <div className="max-w-4xl mx-auto">
+      <div
+        className="prose lg:prose-xl md:prose-lg mx-auto"
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
+    </div>
+  );
+}
+```
+
+これでひとまず見れる形にはなりました。
+
+### 今後実装したいもの
+
+- リンクカード
+- 今の自サイトとの統合
+- 記事へのタグ付け
+
+### 最後に
+
+以上が`blog-starter{:plaintext}`をベースとしたブログの作成でした。
+参考になれば幸いです。
+
+#### 参考記事
+
+- [Next.jsを使った個人ブログ作成のまとめ](https://zenn.dev/rorisutarou/articles/813a97d795cf74)
+- [女医が教える本当に気持ちのいい Markdown 変換処理【Next.js編】](https://zenn.dev/yoshiishunichi/articles/667120b3d0c9d2#%E7%9B%B4%E6%8E%A5%E6%9B%B8%E3%81%84%E3%81%9F%E3%82%BF%E3%82%B0%E3%81%AB%E5%AF%BE%E5%BF%9C)
+- ["tailwindTYPOGRAPHY"で取り急ぎイイ感じなスタイルを適用する](https://zenn.dev/datchlive/articles/50e556d27d68b4)
+- [Rehype Pretty Code を使って、美しきシンタックスハイライトを手に入れる](https://osgsm.io/posts/introducing-rehype-pretty-code)
