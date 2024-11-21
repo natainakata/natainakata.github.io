@@ -77,7 +77,7 @@ const Icon = () => {
 export default Icon;
 ```
 
-詳細は[こちら](https://github.com/natainakata/natai-blog/commit/994d976d3b451e54a99b744dcdbb081d51d0d7f2)のコミットログを確認してください。
+詳細は[こちら](https://github.com/natainakata/natainakata.github.io/commit/994d976d3b451e54a99b744dcdbb081d51d0d7f2)のコミットログを確認してください。
 
 ### 記事を置き換える
 
