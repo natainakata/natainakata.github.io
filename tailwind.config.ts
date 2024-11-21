@@ -40,7 +40,7 @@ const config: Config = {
         sm: "0 5px 10px rgba(0, 0, 0, 0.12)",
         md: "0 8px 30px rgba(0, 0, 0, 0.12)",
       },
-      typography: () => ({
+      typography: (theme) => ({
         DEFAULT: {
           css: {
             "code::before": {
@@ -51,10 +51,65 @@ const config: Config = {
             },
           },
         },
+        dark: {
+          css: {
+            "code::before": {
+              content: "none",
+            },
+            "code::after": {
+              content: "none",
+            },
+            color: theme("colors.gray.200"),
+            a: {
+              color: theme("colors.gray.200"),
+              "&:hover": {
+                color: theme("colors.gray.200"),
+              },
+            },
+            "h2 a": {
+              color: theme("colors.gray.200"),
+            },
+            h1: {
+              color: theme("colors.gray.200"),
+            },
+            h2: {
+              color: theme("colors.gray.200"),
+            },
+            h3: {
+              color: theme("colors.gray.200"),
+            },
+            h4: {
+              color: theme("colors.gray.200"),
+            },
+            h5: {
+              color: theme("colors.gray.200"),
+            },
+            h6: {
+              color: theme("colors.gray.200"),
+            },
+            th: {
+              color: theme("colors.gray.200"),
+            },
+            strong: {
+              color: theme("colors.gray.200"),
+            },
+            code: {
+              color: theme("colors.gray.200"),
+            },
+            figcaption: {
+              color: theme("colors.gray.200"),
+            },
+            blockquote: {
+              color: theme("colors.gray.200"),
+            },
+          },
+        },
       }),
     },
   },
-
+  variants: {
+    typography: ["dark"],
+  },
   plugins: [require("@tailwindcss/typography")],
   important: true,
 };

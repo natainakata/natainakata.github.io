@@ -1,12 +1,12 @@
 .prose figcaption[data-rehype-pretty-code-title] {
-  @apply table bg-gray-700 text-white pt-1 pb-5 px-3 rounded-t-md text-sm;
+  @apply table bg-gray-800 text-white pt-1 pb-5 px-3 rounded-t-md text-sm;
   margin-bottom: -16px;
 }
 
-.prose figcaption[data-rehype-pretty-code-title] + figure {
+figcaption[data-rehype-pretty-code-title] + figure {
   @apply mt-0;
 }
 
-.prose p code {
+p code {
   @apply align-text-bottom rounded-md px-1 py-0.5;
 }

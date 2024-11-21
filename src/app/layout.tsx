@@ -21,7 +21,13 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href={`${BASE_PATH}/assets/icon/icon.svg`} />
       </head>
-      <body className={cn("font-sans")}>
+      <body
+        className={cn(
+          "font-sans",
+          "bg-gray-200",
+          "dark:bg-gray-700 dark:text-gray-200",
+        )}
+      >
         <Header />
         <div className="min-h-screen">{children}</div>
         <Footer />

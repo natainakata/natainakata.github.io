@@ -1,10 +1,11 @@
 import Link from "next/link";
 import styles from "../styles/link.module.css";
 import Icon from "./icon";
+import { ThemeSwitcher } from "./theme-switcher";
 
 const Header = () => {
   return (
-    <header className="shadow-sm container mx-auto">
+    <header className="shadow-sm container mx-auto flex">
       <div className="mx-auto container flex flex-wrap p-4 flex-col md:flex-row items-center md:justify-between">
         <h2 className="font-bold tracking-tight md:tracking-tighter leading-tight flex items-center">
           <div className="pr-4">
@@ -25,6 +26,9 @@ const Header = () => {
             Contact
           </Link>
         </nav>
+      </div>
+      <div className="mt-4 px-4">
+        <ThemeSwitcher />
       </div>
     </header>
   );
