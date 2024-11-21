@@ -7,8 +7,7 @@ import Header from "./_components/header";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
+  title: `${CMS_NAME}`,
 };
 
 export default function RootLayout({
@@ -19,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
-        <link rel="shortcut icon" href={`${BASE_PATH}/assets/icon/icon.svg`} />
+        <link rel="shortcut icon" href={`${BASE_PATH}/assets/icon/icon.png`} />
       </head>
       <body
         className={cn(

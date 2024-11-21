@@ -5,7 +5,7 @@ const Icon = () => {
   return (
     <div>
       <ExportedImage
-        src={`${BASE_PATH}/assets/icon/icon.svg`}
+        src={`${BASE_PATH}/assets/icon/icon.png`}
         alt="Icon"
         width={64}
         height={64}
