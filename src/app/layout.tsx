@@ -4,6 +4,8 @@ import cn from "classnames";
 
 import Footer from "@/app/_components/footer";
 import Header from "./_components/header";
+
+import { ThemeSwitcher } from "./_components/theme-switcher";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -29,6 +31,7 @@ export default function RootLayout({
       >
         <Header />
         <div className="min-h-screen">{children}</div>
+        <ThemeSwitcher />
         <Footer />
       </body>
     </html>

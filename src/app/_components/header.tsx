@@ -1,7 +1,6 @@
 import Link from "next/link";
 import styles from "../styles/link.module.css";
 import Icon from "./icon";
-import { ThemeSwitcher } from "./theme-switcher";
 
 const Header = () => {
   return (
@@ -11,7 +10,7 @@ const Header = () => {
           <div className="pr-4">
             <Icon />
           </div>
-          <Link href="/" className="hover:underline md:text-4xl text-3xl">
+          <Link href="/" className="hover:underline md:text-4xl text-2xl">
             Natai Nakata
           </Link>
         </h2>
@@ -19,16 +18,15 @@ const Header = () => {
           <Link href={"/about"} className={styles["link-header"]}>
             About
           </Link>
-          <Link href={"/works"} className={styles["link-header"]}>
-            Works
-          </Link>
+          {/*
+            <Link href={"/works"} className={styles["link-header"]}>
+              Works
+            </Link>
+          */}
           <Link href={"/contact"} className={styles["link-header"]}>
             Contact
           </Link>
         </nav>
-      </div>
-      <div className="mt-4 px-4">
-        <ThemeSwitcher />
       </div>
     </header>
   );
