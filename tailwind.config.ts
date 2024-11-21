@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { PluginAPI } from "tailwindcss/types/config";
 
 const config: Config = {
   darkMode: "class",
@@ -40,7 +41,7 @@ const config: Config = {
         sm: "0 5px 10px rgba(0, 0, 0, 0.12)",
         md: "0 8px 30px rgba(0, 0, 0, 0.12)",
       },
-      typography: (theme) => ({
+      typography: (theme: PluginAPI["theme"]) => ({
         DEFAULT: {
           css: {
             "code::before": {
