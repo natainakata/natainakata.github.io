@@ -1,3 +1,4 @@
+import { text } from "stream/consumers";
 import type { Config } from "tailwindcss";
 import { PluginAPI } from "tailwindcss/types/config";
 
@@ -50,16 +51,19 @@ const config: Config = {
             "code::after": {
               content: "none",
             },
+            "blockquote p::before": {
+              content: "none",
+            },
+            "blockquote p::after": {
+              content: "none",
+            },
+            "info > p": {
+              backgroundColor: theme("colors.green.100"),
+            }
           },
         },
         dark: {
           css: {
-            "code::before": {
-              content: "none",
-            },
-            "code::after": {
-              content: "none",
-            },
             color: theme("colors.gray.200"),
             a: {
               color: theme("colors.gray.200"),
@@ -98,10 +102,32 @@ const config: Config = {
               color: theme("colors.gray.200"),
             },
             figcaption: {
-              color: theme("colors.gray.200"),
+              color: theme("colors.gray.300"),
             },
             blockquote: {
               color: theme("colors.gray.200"),
+            },
+            "blockquote p::before": {
+              content: "none",
+            },
+            "blockquote p::after": {
+              content: "none",
+            },
+            "code::before": {
+              content: "none",
+            },
+            "code::after": {
+              content: "none",
+            },
+            "info p": {
+              backgroundColor: theme("colors.green.200"),
+              color: theme("colors.gray.800")
+            },
+            "info p a": {
+              color: theme("colors.gray.800"),
+              "&:hover": {
+                color: theme("colors.gray.800"),
+              },
             },
           },
         },
@@ -111,7 +137,12 @@ const config: Config = {
   variants: {
     typography: ["dark"],
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("tailwind-fontawesome")({
+      version: 6,
+    }),
+  ],
   important: true,
 };
 export default config;

@@ -10,3 +10,22 @@ figcaption[data-rehype-pretty-code-title] + figure {
 p code {
   @apply align-text-bottom rounded-md px-1 py-0.5;
 }
+
+info > p {
+  @apply p-4 rounded-md md:text-nowrap;
+}
+info > p::before {
+  @apply pr-4 text-green-800;
+  content: "\f05a";
+  font-family: "FontAwesome";
+}
+
+.rehype-figure-container {
+  @apply flex flex-col md:flex-row text-center justify-between items-center;
+}
+
+.rehype-figure-container img {
+  @apply mx-auto;
+}
+
+

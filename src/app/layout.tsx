@@ -21,14 +21,13 @@ export default function RootLayout({
     <html lang="ja">
       <head>
         <link rel="shortcut icon" href={`${BASE_PATH}/assets/icon/icon.png`} />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          type="text/css"
+        />
       </head>
-      <body
-        className={cn(
-          "font-sans",
-          "bg-gray-200",
-          "dark:bg-gray-700 dark:text-gray-200",
-        )}
-      >
+      <body className={cn("font-sans", "dark:bg-gray-700 dark:text-gray-200")}>
         <Header />
         <div className="min-h-screen">{children}</div>
         <ThemeSwitcher />
