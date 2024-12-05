@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next-image-export-optimizer && next dev --turbopack",
     "build": "next build && next-image-export-optimizer",
-    "start": "next start"
+    "start": "next start",
+    "preview": "next build && next-image-export-optimizer && serve ./out "
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.1",
