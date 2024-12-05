@@ -52,7 +52,9 @@ const config: Config = {
 2\. layout.tsxと\_components/を変更する
 
 ページのレイアウトを変更しつつ、ヘッダーなどのコンポーネントも調整します。<br>
-一部のComponentsは[Tailblocks](https://tailblocks.cc)から引っ張ってきました。
+一部のComponentsはTailblocksから引っ張ってきました。
+
+https://tailblocks.cc
 
 先程導入したフォントもここで適用します。
 
@@ -77,7 +79,9 @@ const Icon = () => {
 export default Icon;
 ```
 
-詳細は[こちら](https://github.com/natainakata/natainakata.github.io/commit/994d976d3b451e54a99b744dcdbb081d51d0d7f2)のコミットログを確認してください。
+詳細はこちらのコミットログを確認してください。
+
+https://github.com/natainakata/natainakata.github.io/commit/994d976d3b451e54a99b744dcdbb081d51d0d7f2
 
 ### 記事を置き換える
 
@@ -187,7 +191,10 @@ export function PostBody({ content }: Props) {
 
 #### 参考記事
 
-- [Next.jsを使った個人ブログ作成のまとめ](https://zenn.dev/rorisutarou/articles/813a97d795cf74)
-- [女医が教える本当に気持ちのいい Markdown 変換処理【Next.js編】](https://zenn.dev/yoshiishunichi/articles/667120b3d0c9d2#%E7%9B%B4%E6%8E%A5%E6%9B%B8%E3%81%84%E3%81%9F%E3%82%BF%E3%82%B0%E3%81%AB%E5%AF%BE%E5%BF%9C)
-- ["tailwindTYPOGRAPHY"で取り急ぎイイ感じなスタイルを適用する](https://zenn.dev/datchlive/articles/50e556d27d68b4)
-- [Rehype Pretty Code を使って、美しきシンタックスハイライトを手に入れる](https://osgsm.io/posts/introducing-rehype-pretty-code)
+https://zenn.dev/rorisutarou/articles/813a97d795cf74
+
+https://zenn.dev/yoshiishunichi/articles/667120b3d0c9d2#%E7%9B%B4%E6%8E%A5%E6%9B%B8%E3%81%84%E3%81%9F%E3%82%BF%E3%82%B0%E3%81%AB%E5%AF%BE%E5%BF%9C
+
+https://zenn.dev/datchlive/articles/50e556d27d68b4
+
+https://osgsm.io/posts/introducing-rehype-pretty-code
