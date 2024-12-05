@@ -1,4 +1,5 @@
 import "../styles/markdown.css";
+import "../styles/markdown-linkcard.css";
 
 type Props = {
   content: string;
