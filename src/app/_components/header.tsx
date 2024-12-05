@@ -15,14 +15,12 @@ const Header = () => {
           </Link>
         </h2>
         <nav className="flex items-center justify-between md:mt-0 mt-4">
+          <Link href={"/pages"} className={styles["link-header"]}>
+            Posts
+          </Link>
           <Link href={"/about"} className={styles["link-header"]}>
             About
           </Link>
-          {/*
-            <Link href={"/works"} className={styles["link-header"]}>
-              Works
-            </Link>
-          */}
           <Link href={"/contact"} className={styles["link-header"]}>
             Contact
           </Link>

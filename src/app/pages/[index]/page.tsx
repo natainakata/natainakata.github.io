@@ -4,6 +4,7 @@ import { PostList } from "@/app/_components/post-list";
 import { getAllPosts } from "@/lib/api";
 import { PER_PAGE } from "@/lib/constants";
 import { range } from "@/lib/api";
+import { notFound } from "next/navigation";
 
 const pageRange = (index: number) => [(index - 1) * PER_PAGE, index * PER_PAGE];
 
@@ -16,8 +17,12 @@ export async function generateStaticParams() {
   
 }
 
-export default async function PageLists({ params }: { params: { index: number } }) {
+export default async function PageLists(props: { params: Promise<{ index: number }> }) {
+  const params = await props.params;
   const index = params.index;
+  if (!index) {
+    return notFound();
+  }
   return (
     <main>
      <Container>
