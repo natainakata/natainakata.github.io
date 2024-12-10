@@ -14,15 +14,15 @@ const TitleImage = ({ title, src, slug }: Props) => {
     <ExportedImage
       src={`${BASE_PATH}/${src}`}
       alt={`Cover Image for ${title}`}
-      className={cn("shadow-sm lg:max-w-4xl mx-auto", {
+      className={cn("shadow-sm lg:max-w-4xl mx-auto max-w-full h-auto", {
         "hover:shadow-lg transition-shadow duration-200": slug,
       })}
-      width={300}
+      width={280}
       height={100}
     />
   );
   return (
-    <div className="sm:mx-0 max-h-32">
+    <div className="sm:mx-0">
       {slug ? (
         <Link href={`/posts/${slug}`} aria-label={title}>
           {image}
