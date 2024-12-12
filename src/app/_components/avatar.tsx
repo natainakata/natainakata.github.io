@@ -1,4 +1,3 @@
-import { BASE_PATH } from "@/lib/constants";
 import Icon from "./icon";
 
 type Props = {
