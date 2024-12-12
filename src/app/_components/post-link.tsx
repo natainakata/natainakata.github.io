@@ -22,12 +22,12 @@ export function PostLink({
   slug,
 }: Props) {
   return (
-      <div className="mt-8 flex flex-wrap md:flex-nowrap gap-8 justify-between">
-        <div className="flex-shrink-0 md:order-3">
+      <div className="mt-8 flex flex-col flex-wrap md:flex-nowrap gap-8 justify-between">
+        <div className="flex-shrink-0">
           <TitleImage slug={slug} title={title} src={coverImage} />
         </div>
         <div>
-          <div className="flex-grow flex-col md:order-2 md:mt-0 mt-4">
+          <div className="flex-grow flex-col md:mt-0 mt-4">
           <h3 className="text-3xl mb-3 leading-snug">
             <Link href={`/posts/${slug}`} className="hover:underline">
               {title}

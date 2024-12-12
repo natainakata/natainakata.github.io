@@ -1,4 +1,5 @@
-import Container from "../_components/container";
+import Container from "@/app/_components/container";
+import Profile from "@/app/_components/profile";
 
 export default function About() {
   return (
@@ -11,15 +12,7 @@ export default function About() {
         <div className="mt-8 text-left mx-auto w-2/3">
           <div className="mt-4">
             <h3 className="text-lg">あいさつ</h3>
-            <p className="mt-2">
-              中田なたいと申します。
-              <br />
-              普段は
-              <a href="https://mk.shrimpia.network" target="_blank">
-                シュリンピア帝国
-              </a>
-              で活動しているプログラマー志望のカードゲーマーです。
-            </p>
+            <Profile />
           </div>
           <div className="mt-4">
             <h3 className="text-lg">趣味とか</h3>

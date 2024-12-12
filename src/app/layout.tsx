@@ -29,7 +29,7 @@ export default function RootLayout({
       </head>
       <body className={cn("font-sans", "dark:bg-gray-700 dark:text-gray-200")}>
         <Header />
-        <div className="min-h-screen">{children}</div>
+        <div className="min-h-screen max-w-screen-xl mx-auto">{children}</div>
         <ThemeSwitcher />
         <Footer />
       </body>
