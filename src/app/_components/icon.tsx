@@ -1,14 +1,21 @@
 import { BASE_PATH } from "@/lib/constants";
 import ExportedImage from "next-image-export-optimizer";
+type Props = {
+  ns: string;
+  name: string;
+  size: number;
+  isRounded: boolean;
+}
 
-const Icon = () => {
+const Icon = (props: Props) => {
   return (
     <div>
       <ExportedImage
-        src={`${BASE_PATH}/assets/icon/icon.png`}
-        alt="Icon"
-        width={64}
-        height={64}
+        className={`${props.isRounded ? "rounded-full" : ""}`}
+        src={`${BASE_PATH}/assets/${props.ns}/${props.name}`}
+        alt={props.name}
+        width={props.size}
+        height={props.size}
       />
     </div>
   );

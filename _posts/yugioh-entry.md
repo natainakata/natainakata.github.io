@@ -5,7 +5,7 @@ coverImage: "assets/blog/yugioh-entry/cover.png"
 date: "2024-12-01T14:18"
 author:
   name: "中田なたい"
-  picture: "assets/blog/authors/natai.png"
+  picture: "natai.png"
 ogImage:
   url: "assets/blog/yugiou-entry/cover.png"
 ---

@@ -8,7 +8,7 @@ const Header = () => {
       <div className="mx-auto container flex flex-wrap p-4 flex-col md:flex-row items-center md:justify-between">
         <h2 className="font-bold tracking-tight md:tracking-tighter leading-tight flex items-center">
           <div className="pr-4">
-            <Icon />
+            <Icon ns="icon" name="icon.png" size={64} isRounded={false}/>
           </div>
           <Link href="/" className="hover:underline md:text-4xl text-2xl">
             Natai Nakata

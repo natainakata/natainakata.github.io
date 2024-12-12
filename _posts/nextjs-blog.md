@@ -5,7 +5,7 @@ coverImage: "assets/blog/nextjs-blog/cover.png"
 date: "2024-11-14T12:43"
 author:
   name: "中田なたい"
-  picture: "assets/blog/authors/natai.png"
+  picture: "natai.png"
 ogImage:
   url: "assets/blog/nextjs-blog/cover.png"
 ---

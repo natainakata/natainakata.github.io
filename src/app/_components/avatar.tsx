@@ -1,4 +1,5 @@
 import { BASE_PATH } from "@/lib/constants";
+import Icon from "./icon";
 
 type Props = {
   name: string;
@@ -8,12 +9,8 @@ type Props = {
 const Avatar = ({ name, picture }: Props) => {
   return (
     <div className="flex items-center">
-      <img
-        src={`${BASE_PATH}/${picture}`}
-        className="w-12 h-12 rounded-full mr-4"
-        alt={name}
-      />
-      <div className="text-xl font-bold">{name}</div>
+      <Icon ns="blog/authors" name={picture} size={48} isRounded={true}/>
+      <div className="ml-4 text-xl font-bold">{name}</div>
     </div>
   );
 };
