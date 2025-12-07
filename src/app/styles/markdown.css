@@ -12,7 +12,7 @@ p code {
 }
 
 info > p {
-  @apply p-4 rounded-md md:text-nowrap;
+  @apply p-4 rounded-md;
 }
 info > p::before {
   @apply pr-4 text-green-800;
@@ -27,5 +27,3 @@ info > p::before {
 .rehype-figure-container img {
   @apply mx-auto;
 }
-
-
