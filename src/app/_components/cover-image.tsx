@@ -14,7 +14,7 @@ const CoverImage = ({ title, src, slug }: Props) => {
     <ExportedImage
       src={`${BASE_PATH}/${src}`}
       alt={`Cover Image for ${title}`}
-      className={cn("shadow-sm lg:max-w-4xl mx-auto", {
+      className={cn("object-contain shadow-sm mx-auto", {
         "hover:shadow-lg transition-shadow duration-200": slug,
       })}
       width={1300}

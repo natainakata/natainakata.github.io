@@ -32,8 +32,8 @@ export default async function Post(props: Params) {
             <PostBody content={content} />
           </article>
         </main>
-        <aside className="xl:block hidden sticky min-h-screen self-end bottom-0 xl:w-1/4 w-full">
-          <Sidebar posts={getAllPosts().slice(0, 4)}/>
+        <aside className="xl:block hidden sticky min-h-screen self-end bottom-0 xl:w-1/4 w-full ml-32">
+          <Sidebar posts={getAllPosts().slice(0, 4)} />
         </aside>
       </div>
     </Container>
