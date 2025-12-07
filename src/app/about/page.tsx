@@ -17,10 +17,9 @@ export default function About() {
           <div className="mt-4">
             <h3 className="text-lg">趣味とか</h3>
             <p className="mt-2">
-              現在のメインは遊戯王OCG,デュエルマスターズです。
+              現在のメインは遊戯王OCG,デュエルマスターズ,モンスト,音ゲー(主にArcaea)です。
               <br />
-              その他、Modded
-              Minecraft,モンスターハンター,ガンダムシリーズなども擦っています。
+              その他、Modded Minecraft,ガンダムシリーズなども擦っています。
             </p>
           </div>
         </div>
