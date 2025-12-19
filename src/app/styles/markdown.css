@@ -27,3 +27,7 @@ info > p::before {
 .rehype-figure-container img {
   @apply mx-auto;
 }
+
+figcaption {
+  @apply text-center;
+}
