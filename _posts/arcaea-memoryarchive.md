@@ -1,6 +1,6 @@
 ---
 title: "【Arcaea】初心者が買ってよかったと思うメモアカ楽曲9選【Memory Archive】"
-excerpt: ""
+excerpt: "初心者目線での買ってよかったメモアカ曲まとめ"
 coverImage: "assets/blog/arcaea-memoryarchive/cover.png"
 date: "2025-12-20T09:00"
 author:
